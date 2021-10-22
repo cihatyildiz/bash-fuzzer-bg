@@ -1,0 +1,148 @@
+# Nmap 7.80 scan initiated Tue Sep 24 10:35:18 2019 as: nmap -Pn -p 443 --script=ssl-enum-ciphers -Ao groweronline--ciphers groweronlineportal.stage.cglcloud.in
+Nmap scan report for groweronlineportal.stage.cglcloud.in (52.45.35.218)
+Host is up (0.099s latency).
+Other addresses for groweronlineportal.stage.cglcloud.in (not scanned): 34.201.229.81 52.54.191.103
+rDNS record for 52.45.35.218: ec2-52-45-35-218.compute-1.amazonaws.com
+
+PORT    STATE SERVICE   VERSION
+443/tcp open  ssl/https Skipper
+| fingerprint-strings: 
+|   DNSVersionBindReqTCP: 
+|     HTTP/1.1 400 Bad Request
+|     Server: awselb/2.0
+|     Date: Tue, 24 Sep 2019 17:35:39 GMT
+|     Content-Type: text/html
+|     Content-Length: 138
+|     Connection: close
+|     <html>
+|     <head><title>400 Bad Request</title></head>
+|     <body bgcolor="white">
+|     <center><h1>400 Bad Request</h1></center>
+|     </body>
+|     </html>
+|   FourOhFourRequest: 
+|     HTTP/1.1 404 Not Found
+|     Date: Tue, 24 Sep 2019 17:35:32 GMT
+|     Content-Type: text/plain; charset=utf-8
+|     Content-Length: 10
+|     Connection: close
+|     Server: Skipper
+|     X-Content-Type-Options: nosniff
+|     Found
+|   GetRequest, HTTPOptions: 
+|     HTTP/1.1 404 Not Found
+|     Date: Tue, 24 Sep 2019 17:35:31 GMT
+|     Content-Type: text/plain; charset=utf-8
+|     Content-Length: 10
+|     Connection: close
+|     Server: Skipper
+|     X-Content-Type-Options: nosniff
+|     Found
+|   RPCCheck: 
+|     HTTP/1.1 400 Bad Request
+|     Server: awselb/2.0
+|     Date: Tue, 24 Sep 2019 17:35:38 GMT
+|     Content-Type: text/html
+|     Content-Length: 138
+|     Connection: close
+|     <html>
+|     <head><title>400 Bad Request</title></head>
+|     <body bgcolor="white">
+|     <center><h1>400 Bad Request</h1></center>
+|     </body>
+|     </html>
+|   RTSPRequest: 
+|     <html>
+|     <head><title>400 Bad Request</title></head>
+|     <body bgcolor="white">
+|     <center><h1>400 Bad Request</h1></center>
+|     </body>
+|     </html>
+|   tor-versions: 
+|     HTTP/1.1 400 Bad Request
+|     Server: awselb/2.0
+|     Date: Tue, 24 Sep 2019 17:35:32 GMT
+|     Content-Type: text/html
+|     Content-Length: 138
+|     Connection: close
+|     <html>
+|     <head><title>400 Bad Request</title></head>
+|     <body bgcolor="white">
+|     <center><h1>400 Bad Request</h1></center>
+|     </body>
+|_    </html>
+|_http-server-header: Skipper
+| ssl-enum-ciphers: 
+|   TLSv1.0: 
+|     ciphers: 
+|       TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA (secp256r1) - A
+|       TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA (secp256r1) - A
+|       TLS_RSA_WITH_AES_128_CBC_SHA (rsa 2048) - A
+|       TLS_RSA_WITH_AES_256_CBC_SHA (rsa 2048) - A
+|     compressors: 
+|       NULL
+|     cipher preference: server
+|   TLSv1.1: 
+|     ciphers: 
+|       TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA (secp256r1) - A
+|       TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA (secp256r1) - A
+|       TLS_RSA_WITH_AES_128_CBC_SHA (rsa 2048) - A
+|       TLS_RSA_WITH_AES_256_CBC_SHA (rsa 2048) - A
+|     compressors: 
+|       NULL
+|     cipher preference: server
+|   TLSv1.2: 
+|     ciphers: 
+|       TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256 (secp256r1) - A
+|       TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA256 (secp256r1) - A
+|       TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA (secp256r1) - A
+|       TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384 (secp256r1) - A
+|       TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384 (secp256r1) - A
+|       TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA (secp256r1) - A
+|       TLS_RSA_WITH_AES_128_GCM_SHA256 (rsa 2048) - A
+|       TLS_RSA_WITH_AES_128_CBC_SHA256 (rsa 2048) - A
+|       TLS_RSA_WITH_AES_128_CBC_SHA (rsa 2048) - A
+|       TLS_RSA_WITH_AES_256_GCM_SHA384 (rsa 2048) - A
+|       TLS_RSA_WITH_AES_256_CBC_SHA256 (rsa 2048) - A
+|       TLS_RSA_WITH_AES_256_CBC_SHA (rsa 2048) - A
+|     compressors: 
+|       NULL
+|     cipher preference: server
+|_  least strength: A
+1 service unrecognized despite returning data. If you know the service/version, please submit the following fingerprint at https://nmap.org/cgi-bin/submit.cgi?new-service :
+SF-Port443-TCP:V=7.80%T=SSL%I=7%D=9/24%Time=5D8A53E3%P=x86_64-apple-darwin
+SF:18.6.0%r(GetRequest,CB,"HTTP/1\.1\x20404\x20Not\x20Found\r\nDate:\x20Tu
+SF:e,\x2024\x20Sep\x202019\x2017:35:31\x20GMT\r\nContent-Type:\x20text/pla
+SF:in;\x20charset=utf-8\r\nContent-Length:\x2010\r\nConnection:\x20close\r
+SF:\nServer:\x20Skipper\r\nX-Content-Type-Options:\x20nosniff\r\n\r\nNot\x
+SF:20Found\n")%r(HTTPOptions,CB,"HTTP/1\.1\x20404\x20Not\x20Found\r\nDate:
+SF:\x20Tue,\x2024\x20Sep\x202019\x2017:35:31\x20GMT\r\nContent-Type:\x20te
+SF:xt/plain;\x20charset=utf-8\r\nContent-Length:\x2010\r\nConnection:\x20c
+SF:lose\r\nServer:\x20Skipper\r\nX-Content-Type-Options:\x20nosniff\r\n\r\
+SF:nNot\x20Found\n")%r(FourOhFourRequest,CB,"HTTP/1\.1\x20404\x20Not\x20Fo
+SF:und\r\nDate:\x20Tue,\x2024\x20Sep\x202019\x2017:35:32\x20GMT\r\nContent
+SF:-Type:\x20text/plain;\x20charset=utf-8\r\nContent-Length:\x2010\r\nConn
+SF:ection:\x20close\r\nServer:\x20Skipper\r\nX-Content-Type-Options:\x20no
+SF:sniff\r\n\r\nNot\x20Found\n")%r(tor-versions,120,"HTTP/1\.1\x20400\x20B
+SF:ad\x20Request\r\nServer:\x20awselb/2\.0\r\nDate:\x20Tue,\x2024\x20Sep\x
+SF:202019\x2017:35:32\x20GMT\r\nContent-Type:\x20text/html\r\nContent-Leng
+SF:th:\x20138\r\nConnection:\x20close\r\n\r\n<html>\r\n<head><title>400\x2
+SF:0Bad\x20Request</title></head>\r\n<body\x20bgcolor=\"white\">\r\n<cente
+SF:r><h1>400\x20Bad\x20Request</h1></center>\r\n</body>\r\n</html>\r\n")%r
+SF:(RTSPRequest,8A,"<html>\r\n<head><title>400\x20Bad\x20Request</title></
+SF:head>\r\n<body\x20bgcolor=\"white\">\r\n<center><h1>400\x20Bad\x20Reque
+SF:st</h1></center>\r\n</body>\r\n</html>\r\n")%r(RPCCheck,120,"HTTP/1\.1\
+SF:x20400\x20Bad\x20Request\r\nServer:\x20awselb/2\.0\r\nDate:\x20Tue,\x20
+SF:24\x20Sep\x202019\x2017:35:38\x20GMT\r\nContent-Type:\x20text/html\r\nC
+SF:ontent-Length:\x20138\r\nConnection:\x20close\r\n\r\n<html>\r\n<head><t
+SF:itle>400\x20Bad\x20Request</title></head>\r\n<body\x20bgcolor=\"white\"
+SF:>\r\n<center><h1>400\x20Bad\x20Request</h1></center>\r\n</body>\r\n</ht
+SF:ml>\r\n")%r(DNSVersionBindReqTCP,120,"HTTP/1\.1\x20400\x20Bad\x20Reques
+SF:t\r\nServer:\x20awselb/2\.0\r\nDate:\x20Tue,\x2024\x20Sep\x202019\x2017
+SF::35:39\x20GMT\r\nContent-Type:\x20text/html\r\nContent-Length:\x20138\r
+SF:\nConnection:\x20close\r\n\r\n<html>\r\n<head><title>400\x20Bad\x20Requ
+SF:est</title></head>\r\n<body\x20bgcolor=\"white\">\r\n<center><h1>400\x2
+SF:0Bad\x20Request</h1></center>\r\n</body>\r\n</html>\r\n");
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Tue Sep 24 10:35:57 2019 -- 1 IP address (1 host up) scanned in 39.49 seconds
